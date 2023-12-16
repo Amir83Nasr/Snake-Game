@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --color-01: #e3f2fd;
+    --color-02: #293447;
+    --color-03: #b8c6dc;
+    --color-04: #212837;
+    --color-05: #171b26;
+
+    --color-food: #ff003d;
+    --color-head: #60cbff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    background: var(--color-01);
+}
+
+/* ———————————–––––––––––––––-------------------- */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 65vmin;
+    height: 70vmin;
+
+    overflow: hidden;
+
+    background: var(--color-02);
+    border-radius: 5px;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.3);
+}
+
+.game-details {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-03);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 27px;
+}
+
+.play-board {
+    width: 100%;
+    height: 100%;
+
+    background: var(--color-04);
+
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+/* ———————————–––––––––––––––-------------------- */
+
+.play-board .food {
+    background: var(--color-food);
+}
+
+.play-board .head {
+    background: var(--color-head);
+}
+
+/* ———————————–––––––––––––––-------------------- */
+
+.controls {
+    /* flex or none */
+    display: none;
+    justify-content: space-between;
+}
+
+.controls i {
+    font-size: 1.3rem;
+    color: var(--color-03);
+    text-align: center;
+
+    width: calc(100% / 4);
+    padding: 25px 0;
+    border-right: 1px solid var(--color-05);
+
+    cursor: pointer;
+}
+
+/* ———————————–––––––––––––––-------------------- */
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+
+        padding: 15px 27px;
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    .controls i {
+        font-size: 1rem;
+
+        padding: 15px 0;
+    }
+}
+
+/* ———————————–––––––––––––––-------------------- */
